@@ -14,11 +14,16 @@
     "@prismicio/client": "^7.4.1",
     "@prismicio/next": "^1.5.0",
     "@prismicio/react": "^2.7.4",
+    "@react-three/drei": "^9.105.6",
+    "@react-three/fiber": "^8.16.3",
+    "@types/three": "^0.164.0",
+    "clsx": "^2.1.1",
     "concurrently": "^8.2.2",
     "gsap": "^3.12.5",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "three": "^0.164.1"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.38",
