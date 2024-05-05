@@ -65,6 +65,7 @@ function Geometries() {
         new Audio("/sounds/hit1.ogg"),
         new Audio("/sounds/hit2.ogg"),
         new Audio("/sounds/hit3.ogg"),
+        new Audio("/sounds/hit4.ogg"),
     ];
 
     const materials = [
