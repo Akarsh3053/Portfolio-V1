@@ -1,5 +1,5 @@
 # Portfolio and Personal Blog
 todo : 
-- configure cms for blog
-- add 3js models
-- add contact forms 
+- [x] configure cms for blog
+- [x] add 3js models
+- [x] add contact forms 
