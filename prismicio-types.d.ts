@@ -249,15 +249,15 @@ interface ProjectDocumentData {
   title: prismic.KeyTextField;
 
   /**
-   * tags field in *Project*
+   * Project URL field in *Project*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: project.tags
+   * - **API ID Path**: project.project_url
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  tags: prismic.RichTextField;
+  project_url: prismic.LinkField;
 
   /**
    * Hover Image field in *Project*
