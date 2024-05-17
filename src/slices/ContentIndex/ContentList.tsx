@@ -19,7 +19,9 @@ const ContentList = ({ items, contentType, fallbackItemImage, viewMoreText = "Re
                             <div>
                                 <span>{item.data.title}</span>
                                 <div>
-                                    {item.tags.map(() => ())}
+                                    {item.tags.map((tag, index) => (
+                                        <span key={index}>{tag}</span>
+                                    ))}
                                 </div>
                                 <span>{viewMoreText}</span>
                             </div>
