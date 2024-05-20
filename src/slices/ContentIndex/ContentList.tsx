@@ -156,7 +156,7 @@ export default function ContentList({
                                 <div className="flex gap-3 text-yellow-400">
                                     {post.tags.map((tag, index) => (
                                         <span key={index} className="text-lg font-bold">
-                                            {tag}
+                                            #{tag}
                                         </span>
                                     ))}
                                 </div>
