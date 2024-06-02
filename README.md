@@ -1,2 +1,0 @@
-# Portfolio and Personal Blog
-
