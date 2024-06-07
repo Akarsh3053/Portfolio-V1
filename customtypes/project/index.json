@@ -27,6 +27,13 @@
           "select": null
         }
       },
+      "date": {
+        "type": "Date",
+        "config": {
+          "label": "Date",
+          "placeholder": ""
+        }
+      },
       "hover_image": {
         "type": "Image",
         "config": {

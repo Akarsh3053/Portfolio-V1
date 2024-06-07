@@ -260,6 +260,17 @@ interface ProjectDocumentData {
   project_url: prismic.LinkField;
 
   /**
+   * Date field in *Project*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project.date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date: prismic.DateField;
+
+  /**
    * Hover Image field in *Project*
    *
    * - **Field Type**: Image
