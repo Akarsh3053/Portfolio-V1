@@ -1,9 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SliceZone } from "@prismicio/react";
-
 import { createClient } from "@/prismicio";
-import { components } from "@/slices";
 import ContentBody from "@/components/ContentBody";
 
 type Params = { uid: string };
