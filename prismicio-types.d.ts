@@ -687,6 +687,51 @@ export interface EducationSliceDefaultPrimary {
 }
 
 /**
+ * Primary content in *Education → Items*
+ */
+export interface EducationSliceDefaultItem {
+  /**
+   * Title field in *Education → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: education.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Timeline field in *Education → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: education.items[].timeline
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  timeline: prismic.KeyTextField;
+
+  /**
+   * Institution field in *Education → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: education.items[].institution
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  institution: prismic.KeyTextField;
+
+  /**
+   * Description field in *Education → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: education.items[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
  * Default variation for Education Slice
  *
  * - **API ID**: `default`
@@ -696,7 +741,7 @@ export interface EducationSliceDefaultPrimary {
 export type EducationSliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<EducationSliceDefaultPrimary>,
-  never
+  Simplify<EducationSliceDefaultItem>
 >;
 
 /**
@@ -974,6 +1019,7 @@ declare module "@prismicio/client" {
       ContentIndexSliceDefault,
       EducationSlice,
       EducationSliceDefaultPrimary,
+      EducationSliceDefaultItem,
       EducationSliceVariation,
       EducationSliceDefault,
       HeroSlice,
