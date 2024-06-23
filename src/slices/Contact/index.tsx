@@ -17,16 +17,19 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <Heading>
+      <Heading as="h2" size="lg" className="-mt-10">
         {slice.primary.heading}
       </Heading>
-      <div className="visme_d"
-        data-title="Clean Contact Form"
-        data-url="x401ry90-clean-contact-form"
-        data-domain="forms" data-full-page="false"
-        data-min-height="500px" data-form-id="77681">
-      </div>
-      <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+      {/* <div className="flex flex-col md:flex-row items-center md:w-[670px] md:h-[700px] -mt-10 px-0">
+        <div className="visme_d"
+          data-title="Clean Contact Form"
+          data-url="x401ry90-clean-contact-form"
+          data-domain="forms" data-full-page="false"
+          data-min-height="500px" data-form-id="77681">
+        </div>
+        <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+        <div className="w-5 h-10 bg-slate-300" ></div>
+      </div> */}
     </Bounded>
   );
 };
