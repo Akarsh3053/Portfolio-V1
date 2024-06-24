@@ -1,7 +1,9 @@
 import Bounded from "@/components/Bounded";
+import ContactForm from "@/components/ContactForm";
 import Heading from "@/components/Heading";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
+import { Shapes } from "../Hero/Shapes";
 
 /**
  * Props for `Contact`.
@@ -20,16 +22,10 @@ const Contact = ({ slice }: ContactProps): JSX.Element => {
       <Heading as="h2" size="lg" className="-mt-10">
         {slice.primary.heading}
       </Heading>
-      {/* <div className="flex flex-col md:flex-row items-center md:w-[670px] md:h-[700px] -mt-10 px-0">
-        <div className="visme_d"
-          data-title="Clean Contact Form"
-          data-url="x401ry90-clean-contact-form"
-          data-domain="forms" data-full-page="false"
-          data-min-height="500px" data-form-id="77681">
-        </div>
-        <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
-        <div className="w-5 h-10 bg-slate-300" ></div>
-      </div> */}
+      <div className="md:grid md:grid-cols-2 gap-4 flex flex-col-reverse">
+        <ContactForm />
+        <Shapes />
+      </div>
     </Bounded>
   );
 };
