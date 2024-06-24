@@ -21,8 +21,8 @@ const ContactForm: React.FC = () => {
         <div className="w-full mx-auto mt-8 p-6 bg-white/10 rounded-lg shadow-md">
             <h2 className="text-3xl font-bold mb-4">Got ideas or questions? let's chat!</h2>
             <form onSubmit={handleSubmit}>
-                <div className="mb-4">
-                    <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
+                <div className="mb-7">
+                    <label htmlFor="name" className="block text-gray-200 font-bold mb-2">
                         Name
                     </label>
                     <input
@@ -30,12 +30,12 @@ const ContactForm: React.FC = () => {
                         id="name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full px-3 py-2 border text-black bg-slate-200 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-3 py-2 border text-black bg-slate-200 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300"
                         required
                     />
                 </div>
-                <div className="mb-4">
-                    <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
+                <div className="mb-7">
+                    <label htmlFor="email" className="block text-gray-200 font-bold mb-2">
                         Email
                     </label>
                     <input
@@ -43,27 +43,32 @@ const ContactForm: React.FC = () => {
                         id="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full text-black bg-slate-200 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full text-black bg-slate-200 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300"
                         required
                     />
                 </div>
-                <div className="mb-4">
-                    <label htmlFor="message" className="block text-gray-700 font-bold mb-2">
+                <div className="mb-7">
+                    <label htmlFor="message" className="block text-gray-200 font-bold mb-2">
                         Message
                     </label>
                     <textarea
                         id="message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="w-full text-black bg-slate-200 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 h-32 resize-none"
+                        className="w-full text-black bg-slate-200 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300 h-32 resize-none"
                         required
                     ></textarea>
                 </div>
                 <button
                     type="submit"
-                    className="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300"
+                    className="group relative flex w-full items-center justify-center overflow-hidden rounded-md border-2 border-slate-900 bg-slate-50  px-4 py-2 font-bold transition-transform ease-out hover:scale-105"
                 >
-                    Send Message
+                    <span
+                        className="absolute inset-0 z-0 h-full translate-y-9 bg-yellow-300 transition-transform  duration-300 ease-in-out group-hover:translate-y-0" />
+                    <span className="relative flex text-slate-800 items-center justify-center gap-2">
+                        Send Message
+                    </span>
+
                 </button>
             </form>
         </div>
