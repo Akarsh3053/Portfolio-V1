@@ -1,20 +1,48 @@
 "use client"
 
 import React, { useState } from 'react';
+import emailjs from "@emailjs/browser";
 
 const ContactForm: React.FC = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
+    const [sent, setSent] = useState(false);
+    const [failed, setFailed] = useState(false);
+
+    const sentStatus = `px-4 py-2 ${sent ? 'mt-2 text-green-600 font-semibold animate-bounce' : 'hidden'}`;
+    const failedStatus = `px-4 py-2 ${failed ? 'mt-2 text-red-600 font-semibold animate-bounce' : 'hidden'}`;
+
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Handle form submission logic here
+        emailjs.send(
+            'service_g4a1kig',
+            'template_6c1nees',
+            {
+                from_name: name,
+                to_name: "Akarsh Bajpai",
+                from_email: email,
+                to_email: "onlyakarsh@gmail.com",
+                message: message,
+            },
+            'Zqbt0KdyiJ6MSrYRy'
+        )
+            .then(
+                () => {
+                    setName('');
+                    setEmail('');
+                    setMessage('');
+                    setSent(true);
+                    setTimeout(() => { setSent(false) }, 3000);
+                },
+                (error) => {
+                    console.error(error);
+                    setFailed(true);
+                    setTimeout(() => { setFailed(false) }, 3000);
+                }
+            );
         console.log('Form submitted:', { name, email, message });
-        // Reset form fields
-        setName('');
-        setEmail('');
-        setMessage('');
     };
 
     return (
@@ -30,7 +58,7 @@ const ContactForm: React.FC = () => {
                         id="name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full px-3 py-2 border text-black bg-slate-200 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                        className="w-full px-3 py-2 border font-semibold text-black bg-slate-200 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300"
                         required
                     />
                 </div>
@@ -43,7 +71,7 @@ const ContactForm: React.FC = () => {
                         id="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full text-black bg-slate-200 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                        className="w-full text-black font-semibold bg-slate-200 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300"
                         required
                     />
                 </div>
@@ -55,7 +83,7 @@ const ContactForm: React.FC = () => {
                         id="message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="w-full text-black bg-slate-200 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300 h-32 resize-none"
+                        className="w-full text-black font-semibold bg-slate-200 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300 h-32 resize-none"
                         required
                     ></textarea>
                 </div>
@@ -68,8 +96,11 @@ const ContactForm: React.FC = () => {
                     <span className="relative flex text-slate-800 items-center justify-center gap-2">
                         Send Message
                     </span>
-
                 </button>
+
+                <p className={sentStatus}>Hey! thanks for reaching out, I'll get back to you soon✌🏻</p>
+                <p className={failedStatus}>Oops! something went wrong, Please try again later😕</p>
+
             </form>
         </div>
     );
