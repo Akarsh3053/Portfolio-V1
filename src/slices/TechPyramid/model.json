@@ -1,0 +1,26 @@
+{
+  "id": "tech_pyramid",
+  "type": "SharedSlice",
+  "name": "TechPyramid",
+  "description": "TechPyramid",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

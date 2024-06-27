@@ -17,6 +17,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "tech_pyramid": {
+              "type": "SharedSlice"
+            },
             "contact": {
               "type": "SharedSlice"
             },
@@ -24,9 +27,6 @@
               "type": "SharedSlice"
             },
             "content_index": {
-              "type": "SharedSlice"
-            },
-            "tech_list": {
               "type": "SharedSlice"
             },
             "biography": {
