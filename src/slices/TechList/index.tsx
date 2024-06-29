@@ -80,7 +80,7 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
             <React.Fragment key={index}>
               <span
                 className={
-                  "tech-item text-8xl font-extrabold uppercase tracking-tighter"
+                  "tech-item text-6xl font-extrabold uppercase tracking-tighter"
                 }
                 style={{
                   color: index === 7 && tech_color ? tech_color : "inherit",

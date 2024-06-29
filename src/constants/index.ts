@@ -18,6 +18,12 @@ export const Skill_main = [
         height: 80,
     },
     {
+        skill_name: "Git",
+        Image: "/git.svg",
+        width: 80,
+        height: 80,
+    },
+    {
         skill_name: "AWS",
         Image: "/AWS.png",
         width: 70,
@@ -94,6 +100,12 @@ export const Frontend_skill = [
         height: 80,
     },
     {
+        skill_name: "3JS",
+        Image: "/3js.png",
+        width: 80,
+        height: 80,
+    },
+    {
         skill_name: "Type Script",
         Image: "/ts.png",
         width: 80,
@@ -119,6 +131,18 @@ export const Backend_skill = [
         Image: "/express.png",
         width: 75,
         height: 75,
+    },
+    {
+        skill_name: "Fast API",
+        Image: "/fastapi.svg",
+        width: 75,
+        height: 75
+    },
+    {
+        skill_name: "Postman",
+        Image: "/postman.png",
+        width: 75,
+        height: 75
     },
     {
         skill_name: "Mongo db",
@@ -154,21 +178,39 @@ export const Backend_skill = [
 
 export const IT_sec = [
     {
+        skill_name: "Kali Linux ",
+        Image: "/kali.png",
+        width: 70,
+        height: 70,
+    },
+    {
         skill_name: "Metasploit",
         Image: "/metasploit.png",
-        width: 75,
-        height: 75,
+        width: 80,
+        height: 80,
     },
     {
         skill_name: "Nmap",
         Image: "/nmap.png",
-        width: 75,
-        height: 75,
+        width: 80,
+        height: 80,
+    },
+    {
+        skill_name: "Selenium",
+        Image: "/selenium.png",
+        width: 65,
+        height: 65,
     },
     {
         skill_name: "Bash",
         Image: "/bash.png",
-        width: 75,
-        height: 75,
+        width: 80,
+        height: 80,
+    },
+    {
+        skill_name: "Wordpress",
+        Image: "/wordpress.png",
+        width: 70,
+        height: 70,
     },
 ];
