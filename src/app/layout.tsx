@@ -12,11 +12,22 @@ const urbanist = Urbanist({ subsets: ["latin"] });
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
-  const settings = await client.getSingle("settings");
+  const page = await client.getSingle("settings");
 
   return {
-    title: settings.data.meta_title,
-    description: settings.data.meta_description,
+    title: page.data.meta_title,
+    description: page.data.meta_description,
+    openGraph: {
+      images: [
+        {
+          url: page.data.social_share.url as string,
+          width: 800,
+          height: 600,
+        }
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
   };
 };
 
