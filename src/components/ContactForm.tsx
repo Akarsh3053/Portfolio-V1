@@ -82,7 +82,6 @@ const ContactForm: React.FC = () => {
                     <textarea
                         id="message"
                         value={message}
-                        placeholder='8318419334'
                         onChange={(e) => setMessage(e.target.value)}
                         className="w-full text-black font-semibold bg-slate-200 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300 h-32 resize-none"
                         required
